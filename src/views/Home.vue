@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Header/>
-    <div class="flex">
+    <div class="main-container flex">
       <Sidebar v-on:Account="Account" v-on:Time="Time" v-on:FixTime="FixTime" v-on:Attendance="Attendance" v-on:ocnStart="OcnStart" v-on:ocnRoundStart="OcnRoundStart" v-on:ocnRoundEnd="OcnRoundEnd" v-on:ocnEnd="OcnEnd" v-on:ocnMail="OcnMail" v-on:List="List" v-on:WorkCalender="WorkCalender"/>
       <div class="w-11/12">
         <component :is="current"/>
@@ -88,6 +88,11 @@ export default {
 </script>
 
 <style scoped>
+
+  .main-container {
+    height: 135vh;
+  }
+
   button {
     margin-top: 10px;
     width: 30%;
