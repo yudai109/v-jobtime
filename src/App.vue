@@ -1,11 +1,25 @@
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+    <router-link to="/signin">ログイン</router-link>
+  </div> -->
+  <router-view />
 </template>
 
+
+<script>
+import firebase from 'firebase';
+import Sidebar from '@/components/Sidebar.vue';
+
+export default {
+  components: {
+    Sidebar
+  },
+  methods: {
+
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -27,4 +41,5 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
 </style>
